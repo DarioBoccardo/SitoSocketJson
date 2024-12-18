@@ -8,3 +8,8 @@ body {
 #content {
     flex: 1;
 }
+
+/* Footer sempre in fondo */
+footer {
+    margin-top: auto;
+}
