@@ -1,0 +1,67 @@
+{
+    "title": "Home page",
+    "language": "it",
+    "sections": [
+      {
+        "header": "Socket e Reti",
+        "description": "Esplorazione del funzionamento delle socket di rete e dei concetti chiave come TCP, UDP e il modello OSI.",
+        "links": [
+          {
+            "text": "Home",
+            "url": "index.html"
+          },
+          {
+            "text": "Socket",
+            "url": "socket.html"
+          },
+          {
+            "text": "Modello OSI",
+            "url": "osi.html"
+          },
+          {
+            "text": "TCP vs UDP",
+            "url": "tcp_udp.html"
+          },
+          {
+            "text": "Glossario",
+            "url": "glossario.html"
+          }
+        ]
+      },
+      {
+        "header": "Cos'è una Socket?",
+        "description": "Una socket è un punto finale per la comunicazione tra due sistemi su una rete, identificata da un indirizzo IP e un numero di porta.",
+        "link": {
+          "text": "Scopri di più",
+          "url": "socket.html"
+        }
+      },
+      {
+        "header": "Il Modello OSI",
+        "description": "Struttura a sette livelli che descrive come i dati vengono trasmessi attraverso una rete.",
+        "link": {
+          "text": "Scopri di più",
+          "url": "osi.html"
+        }
+      },
+      {
+        "header": "TCP vs UDP",
+        "description": "Gestione della comunicazione tra dispositivi: TCP è affidabile, UDP è più veloce ma meno sicuro.",
+        "link": {
+          "text": "Scopri di più",
+          "url": "tcp_udp.html"
+        }
+      },
+      {
+        "header": "Glossario dei Termini Tecnici",
+        "description": "Definizioni dei principali termini tecnici relativi a socket, protocolli di rete e modello OSI.",
+        "link": {
+          "text": "Consulta il glossario",
+          "url": "glossario.html"
+        }
+      }
+    ],
+    "footer": {
+      "text": "Dario Boccardo - 5°E"
+    }
+  }  

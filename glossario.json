@@ -1,0 +1,57 @@
+{
+    "title": "Glossario dei Termini di Rete",
+    "entries": [
+        {
+            "term": "Socket",
+            "definition": "Una socket è un punto finale per la comunicazione tra due sistemi su una rete. Essa combina l'indirizzo IP e il numero di porta per identificare univocamente un processo in esecuzione su un dispositivo.",
+            "link": "socket.html#cos'e-una-socket"
+        },
+        {
+            "term": "TCP (Transmission Control Protocol)",
+            "definition": "Protocollo di comunicazione a livello di trasporto che fornisce una connessione affidabile tra due dispositivi. Garantisce la consegna dei pacchetti in ordine e senza errori.",
+            "link": "tcp_udp.html"
+        },
+        {
+            "term": "UDP (User Datagram Protocol)",
+            "definition": "Protocollo di comunicazione a livello di trasporto che non garantisce la consegna dei pacchetti, ma è più veloce rispetto a TCP. Viene utilizzato quando la velocità è più importante dell'affidabilità, come nello streaming o nei giochi online.",
+            "link": "tcp_udp.html"
+        },
+        {
+            "term": "Livello di Trasporto (Modello OSI)",
+            "definition": "Il livello di trasporto si occupa di garantire una comunicazione affidabile tra due dispositivi, gestendo il flusso di dati e il controllo degli errori. TCP e UDP operano a questo livello nel modello OSI.",
+            "link": "osi.html#livello-trasporto"
+        },
+        {
+            "term": "Modello OSI",
+            "definition": "Il Modello OSI è una struttura a sette livelli che descrive come i dati vengono trasmessi in una rete. Ogni livello svolge un compito specifico, come l'instradamento o la trasmissione fisica dei dati.",
+            "link": "osi.html#cos'e-il-modello-osi"
+        },
+        {
+            "term": "Livello 4 - Trasporto",
+            "definition": "Il livello di trasporto è responsabile per il trasporto end-to-end dei dati e offre servizi come il controllo del flusso e la gestione degli errori. Questo livello gestisce i protocolli TCP e UDP.",
+            "link": "osi.html#livello-trasporto"
+        },
+        {
+            "term": "Indirizzo IP",
+            "definition": "Un indirizzo numerico univoco che identifica un dispositivo su una rete. Può essere pubblico o privato a seconda della rete di appartenenza."
+        },
+        {
+            "term": "Porta",
+            "definition": "Un numero che identifica una specifica applicazione o servizio su un dispositivo, permettendo la comunicazione tra applicazioni attraverso una rete."
+        },
+        {
+            "term": "Protocollo",
+            "definition": "Un insieme di regole che determinano come i dispositivi comunicano tra loro. Ogni livello del modello OSI utilizza protocolli diversi per le proprie funzioni."
+        },
+        {
+            "term": "Server",
+            "definition": "Un server è un dispositivo che fornisce servizi o risorse a un altro dispositivo (client) attraverso la rete. Può essere un server web, un database o qualsiasi altro tipo di servizio.",
+            "link": "socket.html#processo-di-comunicazione"
+        },
+        {
+            "term": "Client",
+            "definition": "Un client è un dispositivo che richiede servizi o risorse da un server. Esegue le applicazioni che interagiscono con il server per ottenere dati o risorse.",
+            "link": "socket.html#processo-di-comunicazione"
+        }
+    ]
+}

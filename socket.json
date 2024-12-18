@@ -1,0 +1,34 @@
+{
+    "title": "Socket",
+    "sections": [
+        {
+            "heading": "Introduzione alle Socket",
+            "content": ""
+        },
+        {
+            "heading": "Cos'\u00e8 una Socket?",
+            "content": "Una <strong>socket</strong> \u00e8 un'interfaccia software che consente la comunicazione tra due dispositivi attraverso una rete. Le socket sono utilizzate per inviare e ricevere dati su reti di computer, come Internet. Ogni socket \u00e8 identificata da un indirizzo IP e una porta specifica, che insieme definiscono un 'endpoint' di comunicazione. Le socket possono essere utilizzate per vari scopi, inclusi i trasferimenti di file, la messaggistica istantanea e la navigazione web. Esse operano tipicamente in due modalit\u00e0: <strong>streaming</strong> o <strong>datagramma</strong>, a seconda del protocollo di rete scelto (TCP o UDP)."
+        },
+        {
+            "heading": "Tipologie di Socket",
+            "content": "Le socket si classificano in due categorie principali, che sono legate ai protocolli di rete utilizzati per la comunicazione:"
+        },
+        {
+            "heading": "Stream Socket (TCP)",
+            "content": "Le socket di tipo <strong>stream</strong> utilizzano il protocollo di comunicazione <strong>TCP</strong> (Transmission Control Protocol), che garantisce una trasmissione affidabile dei dati. Con una socket di tipo stream, i dati vengono inviati in una sequenza continua e devono essere ricevuti nello stesso ordine in cui sono stati inviati. TCP assicura che:<ul><li>I dati arrivino senza errori.</li><li>Vengano ricevuti in ordine.</li><li>Non ci siano duplicazioni di dati.</li><li>Se un pacchetto di dati viene perso, venga ritrasmesso.</li></ul>Le applicazioni che richiedono alta affidabilit\u00e0, come il <strong>web</strong> (HTTP) o la <strong>posta elettronica</strong> (SMTP), utilizzano spesso questo tipo di socket."
+        },
+        {
+            "heading": "Datagram Socket (UDP)",
+            "content": "Le socket di tipo <strong>datagramma</strong> utilizzano il protocollo <strong>UDP</strong> (User Datagram Protocol), che \u00e8 pi\u00f9 veloce ma meno affidabile rispetto al TCP. UDP invia i pacchetti di dati senza garantire che arrivino correttamente, n\u00e9 in ordine n\u00e9 senza duplicazioni. Questo lo rende ideale per applicazioni in tempo reale come il <strong>voip</strong> (Voice over IP) o lo streaming video, dove la velocit\u00e0 \u00e8 pi\u00f9 importante della perfetta affidabilit\u00e0. UDP \u00e8 utilizzato in scenari dove la perdita di alcuni pacchetti non \u00e8 critica e la velocit\u00e0 di trasmissione deve essere prioritaria. Ad esempio:<ul><li>Streaming audio e video (es. YouTube, Netflix)</li><li>Videogiochi online</li><li>Chiamate VoIP</li></ul>"
+        },
+        {
+            "heading": "Processo di Comunicazione con le Socket",
+            "content": "Una comunicazione tra due dispositivi tramite socket avviene in pi\u00f9 fasi, che coinvolgono sia il <strong>server</strong> che il <strong>client</strong>. Ecco un flusso tipico di comunicazione:<ol><li><strong>Creazione della Socket:</strong> Prima di tutto, sia il client che il server creano una socket. Il server crea una socket in ascolto su una porta specifica e su un indirizzo IP, pronto ad accettare le connessioni in arrivo.</li><li><strong>Connessione Client-Server:</strong> Il client stabilisce una connessione con il server utilizzando l'indirizzo IP e la porta del server. Per i socket di tipo stream (TCP), questa connessione \u00e8 orientata alla connessione, e il server accetta o rifiuta la connessione a seconda della disponibilit\u00e0.</li><li><strong>Comunicazione:</strong> Una volta stabilita la connessione, il client e il server possono scambiarsi dati. Il server ascolta continuamente le richieste dei client, mentre i client inviano richieste al server e attendono risposte.</li><li><strong>Chiusura della Connessione:</strong> Quando la comunicazione \u00e8 terminata, entrambe le parti chiudono la connessione, liberando le risorse. Il client e il server inviano messaggi di chiusura per segnare la fine della sessione.</li></ol>"
+        },
+        {
+            "heading": "Alcuni Esempi di Utilizzo delle Socket",
+            "content": "Le socket sono utilizzate in molti scenari di rete. Ecco alcuni esempi comuni di applicazione:<ul><li><strong>HTTP:</strong> Quando un browser web si connette a un server per caricare una pagina web, utilizza una socket per la comunicazione tra il client e il server.</li><li><strong>FTP:</strong> Il File Transfer Protocol (FTP) utilizza le socket per trasferire file tra client e server su una rete.</li><li><strong>Telnet:</strong> Le socket sono utilizzate anche in Telnet, un protocollo che permette di accedere a un computer remoto attraverso la rete.</li><li><strong>Chiamate VoIP:</strong> I software di comunicazione come Skype utilizzano le socket per inviare pacchetti di voce in tempo reale tramite UDP.</li></ul>"
+        }
+    ],
+    "footer": "Dario Boccardo - 5\u00b0E"
+}

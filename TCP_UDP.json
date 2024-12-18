@@ -1,0 +1,27 @@
+{
+    "title": "TCP vs UDP",
+    "sections": [
+        {
+            "heading": "Caratteristiche di TCP",
+            "content": "<ul><li><strong>Affidabilità:</strong> TCP garantisce che i dati vengano consegnati in modo affidabile e nell'ordine corretto.</li><li><strong>Connessione:</strong> TCP richiede una connessione stabilita tra client e server prima della trasmissione.</li><li><strong>Controllo del flusso:</strong> Gestisce la velocità di invio dei dati per evitare sovraccarichi.</li><li><strong>Uso:</strong> Ideale per applicazioni come email, trasferimento file (FTP), e navigazione web (HTTP).</li></ul>"
+        },
+        {
+            "heading": "Caratteristiche di UDP",
+            "content": "<ul><li><strong>Velocità:</strong> UDP è più rapido di TCP poiché non richiede connessione e non garantisce l'ordine dei pacchetti.</li><li><strong>Affidabilità:</strong> Non garantisce la consegna dei dati, quindi i pacchetti possono andare persi.</li><li><strong>Uso:</strong> Ideale per applicazioni in tempo reale come streaming video, VoIP, e giochi online.</li></ul>"
+        },
+        {
+            "heading": "Confronto tra TCP e UDP",
+            "table": {
+                "headers": ["Caratteristica", "TCP", "UDP"],
+                "rows": [
+                    ["Tipo di connessione", "Orientata alla connessione", "Senza connessione"],
+                    ["Affidabilità", "Affidabile", "Non affidabile"],
+                    ["Velocità", "Più lenta", "Molto veloce"],
+                    ["Ordine dei dati", "Garantito", "Non garantito"],
+                    ["Applicazioni", "FTP, HTTP, email", "Streaming, VoIP, gaming"]
+                ]
+            }
+        }
+    ],
+    "footer": "Dario Boccardo - 5°E"
+}

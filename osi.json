@@ -1,0 +1,22 @@
+{
+    "title": "Modello OSI",
+    "sections": [
+        {
+            "heading": "Cos'è il Modello OSI?",
+            "content": "Il <strong>modello OSI</strong> (Open Systems Interconnection) è un modello di riferimento concettuale che descrive come i dati vengono trasmessi da un dispositivo a un altro su una rete. Questo modello è composto da sette livelli, ognuno dei quali si occupa di una funzione specifica nella trasmissione dei dati."
+        },
+        {
+            "heading": "I Sette Livelli del Modello OSI",
+            "content": "<ul><li><strong>Livello 7 - Applicazione:</strong> Gestisce l'interfaccia con l'utente e i servizi di rete.</li><li><strong>Livello 6 - Presentazione:</strong> Si occupa della rappresentazione dei dati (codifica, compressione, cifratura).</li><li><strong>Livello 5 - Sessione:</strong> Gestisce il dialogo tra due dispositivi, garantendo che la connessione sia stabile.</li><li><strong>Livello 4 - Trasporto:</strong> Garantisce il trasporto affidabile dei dati tra due dispositivi.</li><li><strong>Livello 3 - Rete:</strong> Si occupa dell'instradamento dei pacchetti tra dispositivi su reti diverse.</li><li><strong>Livello 2 - Data Link:</strong> Gestisce la trasmissione dei dati tra dispositivi sulla stessa rete.</li><li><strong>Livello 1 - Fisico:</strong> Gestisce la trasmissione fisica dei dati attraverso il mezzo di comunicazione.</li></ul>"
+        },
+        {
+            "heading": "Il Livello di Trasporto",
+            "content": "Il <strong>livello di trasporto</strong> (Livello 4) è uno dei livelli più importanti nel modello OSI, in quanto si occupa di garantire che i dati vengano trasmessi correttamente tra due dispositivi. Esso offre servizi come il controllo degli errori, il controllo del flusso e la gestione delle connessioni."
+        },
+        {
+            "heading": "Protocolli del Livello di Trasporto",
+            "content": "<ul><li><strong>TCP</strong> (Transmission Control Protocol): Un protocollo di tipo connessione-oriented che assicura la corretta consegna dei dati, controllando la perdita di pacchetti e l'ordine di ricezione.</li><li><strong>UDP</strong> (User Datagram Protocol): Un protocollo senza connessione che offre una trasmissione più veloce, ma senza garanzie di affidabilità, ordine o controllo degli errori.</li></ul>"
+        }
+    ],
+    "footer": "Dario Boccardo - 5°E"
+}
