@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Definizione della codifica del carattere (UTF-8) e della viewport per la responsività -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titolo della pagina visibile nella barra del browser -->
     <title>Glossario</title>
+
+    <!-- Link al file CSS di Bootstrap per lo stile della pagina -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link al file CSS personalizzato (style.css) per aggiungere stili personalizzati -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Barra di navigazione (Navbar) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+            <!-- Nome del sito che funziona come link alla home -->
             <a class="navbar-brand" href="index.html">Socket e Reti</a>
+            
+            <!-- Pulsante per toggle del menu su dispositivi mobili -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+            <!-- Menu di navigazione che si espande su dispositivi più grandi -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="socket.html">Socket</a></li>
                     <li class="nav-item"><a class="nav-link" href="osi.html">Modello OSI</a></li>
                     <li class="nav-item"><a class="nav-link" href="tcp_udp.html">TCP vs UDP</a></li>
+                    <!-- Voce del menu attiva (highlighted) per la pagina "Glossario" -->
                     <li class="nav-item"><a class="nav-link active" href="glossario.html">Glossario</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Container -->
+    <!-- Contenitore principale della pagina -->
     <div class="container my-5">
+        <!-- Titolo del glossario -->
         <h1 class="text-center" id="glossary-title">Glossario dei Termini di Rete</h1>
+
+        <!-- Sezione per i termini comuni del glossario -->
         <h2>Termini Comuni</h2>
         <dl class="row" id="glossary-content">
-            <!-- Contenuto caricato dinamicamente -->
+            <!-- Contenuto del glossario caricato dinamicamente -->
         </dl>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer della pagina -->
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
+            <!-- Dati del footer con il nome e la classe -->
             <p class="mb-0">Dario Boccardo - 5°E</p>
         </div>
     </footer>
 
+    <!-- Script per caricare il file Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script>
-        // Caricamento del file JSON
+        // Funzione per caricare dinamicamente il glossario dal file JSON
         fetch('glossario.json')
-            .then(response => response.json())
+            .then(response => response.json()) // Converte la risposta in formato JSON
             .then(data => {
-                const glossaryTitle = document.getElementById('glossary-title');
-                const glossaryContent = document.getElementById('glossary-content');
-                
-                // Imposta il titolo
+                const glossaryTitle = document.getElementById('glossary-title'); // Seleziona l'elemento del titolo
+                const glossaryContent = document.getElementById('glossary-content'); // Seleziona il contenitore del glossario
+
+                // Imposta il titolo del glossario usando i dati dal file JSON
                 glossaryTitle.textContent = data.title;
 
-                // Aggiungi ogni termine e definizione
+                // Aggiungi ogni termine e la sua definizione alla pagina
                 data.entries.forEach(entry => {
+                    // Crea un nuovo elemento 'dt' per il termine
                     const dt = document.createElement('dt');
-                    dt.className = 'col-sm-3';
-                    if (entry.link) {
+                    dt.className = 'col-sm-3'; // Aggiunge la classe per lo stile
+                    if (entry.link) { // Se il termine ha un link associato
                         dt.innerHTML = `<strong><a href="${entry.link}">${entry.term}</a></strong>`;
                     } else {
                         dt.innerHTML = `<strong>${entry.term}</strong>`;
                     }
 
+                    // Crea un nuovo elemento 'dd' per la definizione del termine
                     const dd = document.createElement('dd');
-                    dd.className = 'col-sm-9';
-                    dd.textContent = entry.definition;
+                    dd.className = 'col-sm-9'; // Aggiunge la classe per lo stile
+                    dd.textContent = entry.definition; // Aggiunge la definizione del termine
 
+                    // Aggiungi gli elementi creati al contenitore del glossario
                     glossaryContent.appendChild(dt);
                     glossaryContent.appendChild(dd);
                 });
             })
-            .catch(error => console.error('Errore nel caricamento del glossario:', error));
+            .catch(error => console.error('Errore nel caricamento del glossario:', error)); // Gestione errori
     </script>
 </body>
 </html>

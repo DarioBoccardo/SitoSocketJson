@@ -1,15 +1,20 @@
+/* Impostazione per l'elemento <html> e <body> */
 html, body {
-    height: 100%;
-}
-body {
-    display: flex;
-    flex-direction: column;
-}
-#content {
-    flex: 1;
+    height: 100%; /* Imposta l'altezza di <html> e <body> al 100% della finestra del browser, assicurando che il layout occupi tutta l'altezza della pagina */
 }
 
-/* Footer sempre in fondo */
+/* Impostazioni per il corpo della pagina */
+body {
+    display: flex; /* Utilizza il modello di layout Flexbox per il body */
+    flex-direction: column; /* Organizza i suoi figli (come #content e footer) in una colonna, impilati verticalmente */
+}
+
+/* Impostazioni per l'area di contenuto (#content) */
+#content {
+    flex: 1; /* Assegna a #content uno spazio di crescita flessibile (occupando tutto lo spazio disponibile tra la navbar e il footer) */
+}
+
+/* Impostazioni per il footer */
 footer {
-    margin-top: auto;
+    margin-top: auto; /* Spinge il footer sempre al fondo della pagina, occupando automaticamente lo spazio rimanente */
 }
